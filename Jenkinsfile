@@ -5,6 +5,11 @@ pipeline {
         }
     }
     stages {
+        stage('Checkout') {
+            steps {
+                git 'https://github.com/vokhoadev/jenkins-demo.git'
+            }
+        }
         stage('Install') {
             steps {
                 sh 'npm install'
